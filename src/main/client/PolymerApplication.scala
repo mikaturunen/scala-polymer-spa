@@ -2,7 +2,7 @@ import scala.scalajs.js.JSApp
 import org.scalajs.dom
 import dom.document
 
-object Tutorial extends JSApp {
+object PolymerApplication extends JSApp {
   def main(): Unit = {
     appendPar(document.body, "Test")
   }
