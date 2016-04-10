@@ -1,7 +1,17 @@
 import scala.scalajs.js.JSApp
+import org.scalajs.dom
+import dom.document
 
 object Tutorial extends JSApp {
   def main(): Unit = {
-    println("Test")
+    appendPar(document.body, "Test")
+  }
+
+  def appendPar(targetNode: dom.Node, text: String): Unit = {
+    val node = document.createElement("p")
+    val textNode = document.createTextNode(text)
+
+    node.appendChild(textNode)
+    targetNode.appendChild(node)
   }
 }
